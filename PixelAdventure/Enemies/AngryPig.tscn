@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://PixelAdventure/Enemies/AngryPig.tres" type="SpriteFrames" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 14.0
+
+[node name="AngryPig" type="RigidBody2D"]
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 376, 576 )
+frames = ExtResource( 1 )
+animation = "Idle"
+frame = 3
+playing = true
+offset = Vector2( 0, -15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 376, 562 )
+shape = SubResource( 1 )
